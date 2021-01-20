@@ -1,7 +1,8 @@
 import { Request, Response } from "express";
 import { getRepository } from "typeorm";
 import Customers from "../models/Customer";
-
+//Yup for validate data
+import * as Yup from "yup";
 //View for frontend
 import customerView from "../views/customers_views";
 
@@ -28,6 +29,8 @@ export default {
     const {
       name,
       cep,
+      //latitude,
+      //longitude,
       address,
       district,
       city,
@@ -38,16 +41,37 @@ export default {
 
     const customersRepository = getRepository(Customers);
 
-    const customer = customersRepository.create({
+    const data = {
       name,
       cep,
+      //latitude,
+      //longitude,
       address,
       district,
       city,
       state,
       phone,
       email,
+    };
+
+    const schema = Yup.object().shape({
+      name: Yup.string().required("Name is required"), //Make your error message!
+      cep: Yup.number().positive().integer().required(), //length dont work
+      //latitude: Yup.number().required(),
+      //longitude: Yup.number().required()
+      address: Yup.string().required(),
+      district: Yup.string().required(),
+      city: Yup.string().required(),
+      state: Yup.string().required(),
+      phone: Yup.string().required(),
+      email: Yup.string().email().required().max(30),
     });
+
+    await schema.validate(data, {
+      abortEarly: false,
+    });
+
+    const customer = customersRepository.create(data);
 
     await customersRepository.save(customer);
 
