@@ -2,7 +2,7 @@ en-us,
 
 ## Instructions
 
-`yarn install` - for install all dependencies.
+`yarn install` <p> for install all dependencies.</p>
 
 `yarn dev` <p> Run backend in localhost: 3333 </p>
 

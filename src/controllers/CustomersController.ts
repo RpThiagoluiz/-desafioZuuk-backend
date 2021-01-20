@@ -2,13 +2,16 @@ import { Request, Response } from "express";
 import { getRepository } from "typeorm";
 import Customers from "../models/Customer";
 
+//View for frontend
+import customerView from "../views/customers_views";
+
 export default {
   async index(request: Request, response: Response) {
     const customersRepository = getRepository(Customers);
 
     const customers = await customersRepository.find();
 
-    return response.json(customers);
+    return response.json(customerView.renderAll(customers));
   },
 
   async show(request: Request, response: Response) {
@@ -18,7 +21,7 @@ export default {
 
     const customer = await customersRepository.findOneOrFail(id);
 
-    return response.json(customer);
+    return response.json(customerView.render(customer));
   },
 
   async create(request: Request, response: Response) {
