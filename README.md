@@ -1,19 +1,3 @@
-en-us,
-
-## Instructions
-
-`yarn install` <p> for install all dependencies.</p>
-
-`yarn dev` <p> Run backend in localhost: 3333 </p>
-
-<p>Can u use insominia for post, if the frontend isnt start </p>
-<p>For see data in database, use beekeeper Studio</p>
-
-### Note
-
-<p>I created this backend using typescript, I had already done 2 projects before that involve typescript in the back end, I found it more useful to use it for better performance of the time I have to perform the test. </p>
-  thx,
-
 pt-br,
 
 ## Instruções
@@ -30,7 +14,25 @@ pt-br,
 <p> Criei este backend usando typescript, já havia feito 2 projetos antes que envolvem typescript no back end, achei mais útil usá-lo para melhor desempenho do tempo que tenho para realizar o teste. </p>
   Obrigado,
 
-<h4>Prints</h4>
+</br>
+
+en-us,
+
+## Instructions
+
+`yarn install` <p> for install all dependencies.</p>
+
+`yarn dev` <p> Run backend in localhost: 3333 </p>
+
+<p>Can u use insominia for post, if the frontend isnt start </p>
+<p>For see data in database, use beekeeper Studio</p>
+
+### Note
+
+<p>I created this backend using typescript, I had already done 2 projects before that involve typescript in the back end, I found it more useful to use it for better performance of the time I have to perform the test. </p>
+  thx,
+
+### Prints
 
 ![](./ImgRead.ME/ApiCall.png)
 ![](./ImgRead.ME/ApiGetId.png)

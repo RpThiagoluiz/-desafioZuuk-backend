@@ -85,4 +85,15 @@ export default {
 
     return response.status(200).json(customer);
   },
+
+  //test
+  // async update(request: Request, response: Response) {
+  //   const { id } = request.params;
+
+  //   const customersRepository = getRepository(Customers);
+
+  //   const customer = await customersRepository.findOneOrFail(id);
+
+  //   return response.status(200).json(customerView.render(customer));
+  // },
 };
