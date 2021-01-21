@@ -31,9 +31,10 @@ pt-br,
   Obrigado,
 
 <h4>Prints</h4>
-![](./imagesGitHub/ApiCall.jpg)
-![](./imagesGitHub/ApiGetId.jpg)
-![](./imagesGitHub/ApiPost02.jpg)
+
+![](./ImgRead.ME/ApiCall.png)
+![](./ImgRead.ME/ApiGetId.png)
+![](./ImgRead.ME/ApiPost02.png)
 
 <h4>Update</h4>
 [ ] - Longitude, latitude
