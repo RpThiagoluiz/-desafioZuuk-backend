@@ -30,6 +30,11 @@ pt-br,
 <p> Criei este backend usando typescript, já havia feito 2 projetos antes que envolvem typescript no back end, achei mais útil usá-lo para melhor desempenho do tempo que tenho para realizar o teste. </p>
   Obrigado,
 
+<h4>Prints</h4>
+![](/imagesGitHub/ApiCall.jpg)
+![](/imagesGitHub/ApiGetId.jpg)
+![](/imagesGitHub/ApiPost02.jpg)
+
 <h4>Update</h4>
 - [] Longitude, latitude
 - [] usuário marcar a localização nele me uma libs de mapa.
