@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { getRepository } from "typeorm";
+import { DeleteResult, getRepository } from "typeorm";
 import Customers from "../models/Customer";
 //Yup for validate data
 import * as Yup from "yup";
@@ -76,5 +76,13 @@ export default {
     await customersRepository.save(customer);
 
     return response.status(201).json(customer);
+  },
+
+  async delete(request: Request, response: Response) {
+    const { id } = request.params;
+    const customersRepository = getRepository(Customers);
+    const customer = await customersRepository.delete(id);
+
+    return response.status(200).json(customer);
   },
 };
